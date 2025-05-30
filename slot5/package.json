@@ -1,0 +1,20 @@
+{
+  "name": "slot5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.x.x",
+    "jquery": "^3.x.x",
+    "@popperjs/core": "^2.x.x"
+  },
+  "devDependencies": {
+    "lite-server": "^2.x.x"
+  }
+}
