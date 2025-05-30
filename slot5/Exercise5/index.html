@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome cho biểu tượng mạng xã hội -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>FPT University - Students</title>
+    <style>
+        /* Tùy chỉnh màu sắc và kiểu dáng */
+        .navbar {
+            background-color: #f5c071;
+        }
+        .group-photo-container {
+            background-color: #f28c38; /* Nền màu cam đậm */
+            padding: 20px; /* Tạo khoảng trống xung quanh ảnh */
+            margin: 0; /* Xóa toàn bộ margin để tràn sát mép */
+            width: 100%; /* Tràn toàn bộ chiều rộng */
+            border-radius: 0; /* Xóa bo góc */
+        }
+        .group-photo {
+            border: 5px solid #f28c38; /* Viền màu cam cho ảnh */
+            width: 90%; /* Thu nhỏ ảnh nhóm xuống 90% chiều rộng khung chứa */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Căn giữa ảnh trong khung */
+        }
+        .students-section {
+            padding: 40px 0;
+        }
+        .student-card {
+            margin-bottom: 20px;
+        }
+        .student-card .card {
+            padding: 10px; /* Thêm padding để card gọn hơn */
+        }
+        .student-card img {
+            width: 100px; /* Thu nhỏ ảnh sinh viên thành 100x100px */
+            height: 100px;
+            object-fit: cover; /* Giữ tỷ lệ ảnh */
+            display: block;
+            margin: 0 auto; /* Căn giữa ảnh */
+            border-radius: 50%; /* Làm ảnh thành hình tròn để giống đề bài */
+        }
+        .card-body {
+            padding: 10px; /* Giảm padding trong card để gọn hơn */
+        }
+        .footer {
+            background-color: #f28c38;
+            color: white;
+            padding: 20px 0;
+        }
+        .footer a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+        .footer-address p {
+            margin: 5px 0; /* Giảm khoảng cách giữa các dòng trong address */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="fpt-logo.png" alt="FPT University" style="width: 150px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Students</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Group Photo -->
+    <div class="group-photo-container">
+        <img src="group-photo.png" alt="Group Photo" class="group-photo">
+    </div>
+
+    <!-- Students Detail Section -->
+    <section class="students-section">
+        <div class="container">
+            <h2 class="text-center mb-4">Students Detail</h2>
+            <div class="row">
+                <!-- Student 1 -->
+                <div class="col-md-6 student-card">
+                    <div class="card">
+                        <img src="Hoang.jpg" class="card-img-top" alt="Student 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Lê Văn Hoàng - DE180560</h5>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status1" id="absent1" value="absent">
+                                <label class="form-check-label" for="absent1">Absent</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status1" id="present1" value="present" checked>
+                                <label class="form-check-label" for="present1">Present</label>
+                            </div>
+                            <button class="btn btn-primary d-block mx-auto mt-3">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Student 2 -->
+                <div class="col-md-6 student-card">
+                    <div class="card">
+                        <img src="huy.jpg" class="card-img-top" alt="Student 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nguyễn Song Gia Huy - DE180549</h5>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status2" id="absent2" value="absent" checked>
+                                <label class="form-check-label" for="absent2">Absent</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status2" id="present2" value="present">
+                                <label class="form-check-label" for="present2">Present</label>
+                            </div>
+                            <button class="btn btn-primary d-block mx-auto mt-3">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Student 3 -->
+                <div class="col-md-6 student-card">
+                    <div class="card">
+                        <img src="Quyen.jpg" class="card-img-top" alt="Student 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Phan Thị Ngọc Quyên - DE180559</h5>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status3" id="absent3" value="absent">
+                                <label class="form-check-label" for="absent3">Absent</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status3" id="present3" value="present" checked>
+                                <label class="form-check-label" for="present3">Present</label>
+                            </div>
+                            <button class="btn btn-primary d-block mx-auto mt-3">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Student 4 -->
+                <div class="col-md-6 student-card">
+                    <div class="card">
+                        <img src="Vu.jpg" class="card-img-top" alt="Student 4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nguyễn Hữu Hoàng Vũ - DE180587</h5>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status4" id="absent4" value="absent" checked>
+                                <label class="form-check-label" for="absent4">Absent</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status4" id="present4" value="present">
+                                <label class="form-check-label" for="present4">Present</label>
+                            </div>
+                            <button class="btn btn-primary d-block mx-auto mt-3">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 footer-address">
+                    <p>OUR ADDRESS</p>
+                    <p>Lô E2a-7, Đường D1, Khu Công nghệ cao, P.Long Thạnh Mỹ, Tp. Thủ Đức, TP.HCM.</p>
+                    <p>Hotline: 0935357137.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p>© Copyright 2021</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <a href="#"><i class="fab fa-git"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery, Popper.js, và Bootstrap JS -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
