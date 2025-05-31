@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>ConFusion</title>
     <style>
-        /* Tùy chỉnh màu nền và viền */
         .header-section {
             background-color: #e9ecef;
             padding: 20px;
@@ -30,7 +29,7 @@
     </style>
 </head>
 <body>
-    <!-- Phần tiêu đề và liên kết -->
+    <!-- Header -->
     <div class="header-section">
         <h1>Let's test the grid!</h1>
         <div class="mt-3">
@@ -41,33 +40,27 @@
         </div>
     </div>
 
-    <!-- Phần grid -->
+    <!-- Grid section -->
     <div class="container grid-section">
-        <div class="row">
-            <!-- First col -->
-            <div class="col-md-6">
+
+        <!-- First col block -->
+        <div class="row mb-4">
+            <div class="col-12">
                 <h3>First col</h3>
-                <div class="row">
-                    <div class="col-6 grid-col">col</div>
-                    <div class="col-6 grid-col">col</div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-6 grid-col">col</div>
-                    <div class="col-6 grid-col">col</div>
-                </div>
+                <div class="grid-col">col</div>
+                <div class="grid-col mt-2">col</div>
+                <div class="grid-col mt-2">col</div>
+                <div class="grid-col mt-2">col</div>
             </div>
-            <!-- Second col -->
-            <div class="col-md-6">
+        </div>
+
+        <!-- Second col block -->
+        <div class="row">
+            <div class="col-12">
                 <h3>Second col</h3>
-                <div class="row">
-                    <div class="col-12 grid-col">col</div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-12 grid-col">col</div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-12 grid-col">col</div>
-                </div>
+                <div class="grid-col">col</div>
+                <div class="grid-col mt-2">col</div>
+                <div class="grid-col mt-2">col</div>
             </div>
         </div>
     </div>
@@ -77,10 +70,9 @@
         <p>Created by ABC!</p>
     </div>
 
-    <!-- jQuery, Popper.js, và Bootstrap JS -->
+    <!-- JS -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
-

@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.x.x",
-    "jquery": "^3.x.x",
-    "@popperjs/core": "^2.x.x"
+    "@popperjs/core": "^2.x.x",
+    "boostrap": "^2.0.0",
+    "bootstrap": "^5.3.6",
+    "jquery": "^3.7.1",
+    "popper.js": "^1.16.1"
   },
   "devDependencies": {
     "lite-server": "^2.x.x"
