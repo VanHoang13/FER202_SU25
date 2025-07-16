@@ -28,11 +28,11 @@ function Home() {
       <Container className="text-center">
         <Row className="justify-content-center d-flex" style={{ gap: "100px" }} >
           {[
-            { src: "/images/fries.jpg", alt: "Fries" },
-            { src: "/images/pizza.jpg", alt: "Pizza" },
-            { src: "/images/tea.jpg", alt: "Tea" },
-            { src: "/images/ham.jpg", alt: "Ham" },
-            { src: "/images/salad.jpg", alt: "Salad" },
+            { src: "/images/real.jpg", alt: "Real" },
+            { src: "/images/chelsea.jpg", alt: "Chelsea" },
+            { src: "/images/mu.jpg", alt: "MU" },
+            { src: "/images/psg.jpg", alt: "PSG" },
+            { src: "/images/tot.jpg", alt: "tot" },
           ].map((item, idx) => (
             <Col key={idx} xs="auto" className="p-0">
               <img  src={item.src}  alt={item.alt}  className="rounded-circle img-fluid"
