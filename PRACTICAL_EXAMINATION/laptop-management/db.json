@@ -7,7 +7,8 @@
       "year": 2023,
       "price": "$999",
       "image": "/images/dell-xps13.jpg",
-      "description": "High-performance laptop with sleek design and excellent display"
+      "description": "High-performance ultrabook",
+      "quantity": 10
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "year": 2022,
       "price": "$2500",
       "image": "/images/macbook-pro.jpg",
-      "description": "Powerful laptop with Retina display and long battery life"
+      "description": "Powerful laptop",
+      "quantity": 0
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "year": 2021,
       "price": "$1800",
       "image": "/images/hp-spectre.jpg",
-      "description": "Convertible laptop with stunning 2-in-1 design and vibrant screen"
+      "description": "Versatile 2-in-1",
+      "quantity": 14
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "year": 2020,
       "price": "$1600",
       "image": "/images/lenovo-thinkpad.jpg",
-      "description": "Durable business laptop with robust performance and security features"
+      "description": "Business-class laptop",
+      "quantity": 12
     }
   ],
   "UserAccounts": [
@@ -65,6 +69,16 @@
       "password": "1234567",
       "account_type": "guest",
       "status": "active"
+    }
+  ],
+  "Cart": [
+    {
+      "id": 1752830528558,
+      "laptopId": 3,
+      "brand": "HP",
+      "model": "Spectre x360",
+      "price": "$1800",
+      "quantity": 1
     }
   ]
 }

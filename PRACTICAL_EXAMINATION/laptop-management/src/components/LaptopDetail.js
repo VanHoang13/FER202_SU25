@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Card, Row, Col } from 'react-bootstrap';
 import '../styles/LaptopDetail.css';
 
 const LaptopDetail = () => {
@@ -11,11 +12,11 @@ const LaptopDetail = () => {
 
   useEffect(() => {
     setLoading(true);
+    setError(null);
+    console.log('Fetching laptop with id:', id); // Debug log
     fetch(`http://localhost:5000/Laptops/${id}`)
       .then((res) => {
-        if (!res.ok) {
-          throw new Error('Laptop not found');
-        }
+        if (!res.ok) throw new Error('Laptop not found');
         return res.json();
       })
       .then((data) => {
@@ -23,56 +24,43 @@ const LaptopDetail = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.error('Error fetching laptop:', error);
+        console.error('Fetch error:', error);
         setError(error.message);
         setLoading(false);
       });
   }, [id]);
 
-  if (loading) {
-    return <div className="loading">Loading laptop details...</div>;
-  }
-
-  if (error) {
-    return <div className="not-found">🔍 {error}</div>;
-  }
-
-  if (!laptop) {
-    return <div className="not-found">🔍 Laptop not found!</div>;
-  }
+  if (loading) return <div className="loading">Loading laptop details...</div>;
+  if (error) return <div className="not-found">🔍 {error} (ID: {id})</div>;
+  if (!laptop) return <div className="not-found">🔍 Laptop not found!</div>;
 
   return (
     <div className="laptop-detail-container">
       <h2 className="laptop-detail-title">{laptop.brand} {laptop.model}</h2>
-      <div className="laptop-detail-content">
-        <div className="laptop-image-container">
-          <img src={process.env.PUBLIC_URL + laptop.image} alt={laptop.model} className="laptop-image" />
-        </div>
-        <div className="laptop-info">
-          <div className="info-item">
-            <span className="info-label">📅 Year:</span>
-            <span className="info-value">{laptop.year}</span>
-          </div>
-          <div className="info-item price-item">
-            <span className="info-label">💰 Price:</span>
-            <span className="info-value">{laptop.price}</span>
-          </div>
-          <div className="info-item">
-            <span className="info-label">🏢 Brand:</span>
-            <span className="info-value">{laptop.brand}</span>
-          </div>
-          <div className="info-item">
-            <span className="info-label">💻 Model:</span>
-            <span className="info-value">{laptop.model}</span>
-          </div>
-        </div>
-        {laptop.description && (
-          <div className="description-container">
-            <h3 className="description-title">📝 Description</h3>
-            <div className="description-content">{laptop.description}</div>
-          </div>
-        )}
-      </div>
+      <Card className="laptop-card">
+        <Row>
+          <Col md={6}>
+            <Card.Img
+              src={process.env.PUBLIC_URL + laptop.image}
+              alt={laptop.model}
+              className="laptop-image"
+            />
+          </Col>
+          <Col md={6}>
+            <Card.Body>
+              <Card.Text><strong>📅 Year:</strong> {laptop.year}</Card.Text>
+              <Card.Text><strong>💰 Price:</strong> {laptop.price}</Card.Text>
+              <Card.Text><strong>🏢 Brand:</strong> {laptop.brand}</Card.Text>
+              <Card.Text><strong>💻 Model:</strong> {laptop.model}</Card.Text>
+              {laptop.description && (
+                <Card.Text>
+                  <strong>📝 Description:</strong> {laptop.description}
+                </Card.Text>
+              )}
+            </Card.Body>
+          </Col>
+        </Row>
+      </Card>
     </div>
   );
 };
@@ -86,6 +74,7 @@ LaptopDetail.propTypes = {
     price: PropTypes.string,
     image: PropTypes.string,
     description: PropTypes.string,
+    quantity: PropTypes.number,
   }),
 };
 
