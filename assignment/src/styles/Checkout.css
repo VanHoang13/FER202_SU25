@@ -1,0 +1,23 @@
+.checkout-container {
+       padding: 20px;
+       max-width: 800px;
+       margin: 0 auto;
+     }
+
+     .checkout-title {
+       margin-bottom: 20px;
+     }
+
+     .checkout-container ul {
+       list-style-type: none;
+       padding: 0;
+     }
+
+     .checkout-container li {
+       margin-bottom: 10px;
+     }
+
+     .checkout-container h4 {
+       margin-top: 20px;
+       margin-bottom: 10px;
+     }

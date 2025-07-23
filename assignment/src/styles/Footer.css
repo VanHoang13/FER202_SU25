@@ -1,0 +1,8 @@
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  margin-top: auto; /* Đẩy footer xuống dưới cùng khi nội dung cuộn */
+}

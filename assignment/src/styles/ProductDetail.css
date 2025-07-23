@@ -1,0 +1,33 @@
+.product-detail {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.detail-image {
+  max-width: 50%;
+  height: auto;
+}
+
+.detail-info {
+  flex: 1;
+}
+
+.detail-info h2 {
+  margin-bottom: 10px;
+}
+
+.detail-info p {
+  margin-bottom: 10px;
+}
+
+.detail-info .mb-3 {
+  margin-bottom: 15px !important;
+}
+
+.detail-info button {
+  padding: 8px 16px;
+  margin-right: 10px;
+}

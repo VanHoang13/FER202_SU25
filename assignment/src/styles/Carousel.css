@@ -1,0 +1,21 @@
+.carousel {
+  margin-bottom: 20px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 400px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  filter: brightness(0) invert(1);
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #fff;
+}
+
+.carousel-indicators .active {
+  background-color: #007bff;
+}

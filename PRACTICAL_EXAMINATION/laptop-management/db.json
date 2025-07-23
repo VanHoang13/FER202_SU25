@@ -8,7 +8,7 @@
       "price": "$999",
       "image": "/images/dell-xps13.jpg",
       "description": "High-performance ultrabook",
-      "quantity": 10
+      "quantity": 9
     },
     {
       "id": 2,
@@ -78,6 +78,14 @@
       "brand": "HP",
       "model": "Spectre x360",
       "price": "$1800",
+      "quantity": 1
+    },
+    {
+      "id": 1753105833791,
+      "laptopId": 1,
+      "brand": "Dell",
+      "model": "XPS 13",
+      "price": "$999",
       "quantity": 1
     }
   ]
